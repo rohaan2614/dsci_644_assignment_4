@@ -26,6 +26,30 @@ public class CalculatorTest extends TestCase {
         Calculator calculator = new Calculator();
         assertEquals(5.0, calculator.divide(10.0, 2.0), 0.001); }
 
+    public void testAverage() {
+        Calculator calculator = new Calculator();
+
+        // Test case for Average method
+        double[] averageArray = {1.0, 2.0, 3.0, 4.0, 5.0};
+        assertEquals(3.0, calculator.Average(averageArray), 0.001); // Using delta for double comparison
+    }
+    public void testFactorial() {
+        Calculator calculator = new Calculator();
+
+        // Test case for factorial method
+        assertEquals(120, calculator.factorial(5));
+    }
+
+    public void testSquareRoot() {
+        Calculator calculator = new Calculator();
+        assertEquals(5.0, calculator.squareRoot(25.0), 0.001);    }
+
+    public void testModuloOfTwoNum() {
+        Calculator calculator = new Calculator();
+
+        // Test case for moduloOfTwoNum method
+        assertEquals(1.0, calculator.moduloOfTwoNum(10.0, 3.0), 0.001); // Using delta for double comparison
+    }
 
 
 }
