@@ -33,12 +33,13 @@ public class CalculatorTest extends TestCase {
     public void testAverage() {
         Calculator calculator = new Calculator();
         double[] averageArray = {1.0, 2.0, 3.0, 4.0, 5.0};
+//        success case
         assertEquals(3.0, calculator.Average(averageArray), 0.001);
-    }
-
-    public void testFactorial() {
-        Calculator calculator = new Calculator();
-        assertEquals(120, calculator.factorial(5));
+        try {
+            calculator.Average(new double[]{});
+        } catch (IllegalArgumentException exception) {
+            assertEquals("Input array cannot be empty", exception.getMessage());
+        }
     }
 
     public void testSquareRoot() {
@@ -51,10 +52,14 @@ public class CalculatorTest extends TestCase {
 
     public void testModuloOfTwoNum() {
         Calculator calculator = new Calculator();
-
-        // Test case for moduloOfTwoNum method
         assertEquals(1.0, calculator.moduloOfTwoNum(10.0, 3.0), 0.001);
     }
 
-
+    public void testFactorial() {
+        Calculator calculator = new Calculator();
+//        success case
+        assertEquals(120, calculator.factorial(5));
+//        failure case
+        assertEquals(0, calculator.factorial(-2));
+    }
 }
