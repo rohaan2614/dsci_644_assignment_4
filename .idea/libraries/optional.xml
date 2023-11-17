@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="optional">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/optional/fop-font-metrics.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/fop.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/batik.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/avalon.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
